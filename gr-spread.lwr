@@ -21,7 +21,7 @@ depends:
 description: gr-dsss toolkit for software defined radio
 category: common
 gitbranch: master
-source: https://github.com/CIG-SDR/CIG.git
+source: https://github.com/CIG-SDR/CIG/tree/master/gr-spread
 #gitargs: --recursive
 #vars:
   #config_opt: " -DENABLE_DOXYGEN=$builddocs "
