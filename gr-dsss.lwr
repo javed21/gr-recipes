@@ -19,7 +19,7 @@ depends:
 - cppunit
 description: gr-dsss toolkit for software defined radio
 category: common
-gitbranch: master
+gitbranch: patch-1
 source: git+https://github.com/ericdegroot/gr-dsss.git
 #gitargs: --recursive
 #vars:
