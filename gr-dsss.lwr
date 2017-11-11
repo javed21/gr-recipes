@@ -1,0 +1,27 @@
+# This means the build/install works like any other cmake project:
+inherit: cmake
+# These dependencies are only for source builds:
+depends:
+- gnuradio
+- cppunit
+# There's more dependencies in the real repo, skipping for this example
+description: Free and open source toolkit for software defined radio
+category: common
+# Its good practice to add one of these for all the installers we have:
+satisfy:
+  deb: gnuradio-dev
+source: git+https://github.com/ericdegroot/gr-dsss.git
+# master is the default branch, but you can choose a different branch or tag here:
+gitbranch: master
+# Instead of a branch, you can also specify any commit:
+#gitrev: 012345abc
+# Another way to specify a commit is to append a rev, tag, or commit has to the
+# source URL (git+https://.../gnuradio.git@abcd1234)
+# Only when cloning the source code is this used, in that case, these args are
+# appended to the git command that does the clone:
+gitargs: --recursive
+# Variables defined here can be used in various places in this recipe:
+vars:
+  config_opt: " -DENABLE_DOXYGEN=$builddocs "
+# For static builds, we need to override the defaults from the cmake.lwt recipe:
+configure_static: cmake .. -DCMAKE_BUILD_TYPE=$cmakebuildtype -DCMAKE_INSTALL_PREFIX=$prefix -DENABLE_STATIC_LIBS=True $config_opt
