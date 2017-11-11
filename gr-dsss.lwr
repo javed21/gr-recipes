@@ -20,7 +20,7 @@ depends:
 description: gr-dsss toolkit for software defined radio
 category: common
 gitbranch: patch-1
-source: git+https://github.com/ericdegroot/gr-dsss.git
+source: https://github.com/javed21/gr-dsss.git
 #gitargs: --recursive
 #vars:
   #config_opt: " -DENABLE_DOXYGEN=$builddocs "
