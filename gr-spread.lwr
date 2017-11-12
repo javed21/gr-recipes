@@ -16,7 +16,7 @@
 inherit: cmake
 depends:
 - gnuradio
-- cppunit
+- CppUnit
 - doxygen
 description: gr-dsss toolkit for software defined radio
 category: common
